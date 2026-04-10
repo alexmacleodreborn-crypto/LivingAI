@@ -83,7 +83,7 @@ const SLEDDashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=5m&range=5d`;
+      const url = `/api/yahoo/v8/finance/chart/${symbol}?interval=5m&range=5d`;
       const res = await fetch(url);
       const json = await res.json();
 
